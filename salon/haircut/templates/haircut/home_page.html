@@ -1,0 +1,40 @@
+<head>
+    <title>Amazing Amy’s Barbershop</title>
+</head>
+<body>
+    <h1>Amazing Amy’s
+Barbershop
+</h1>
+    <p>A Fresh Cut You And Your
+Family!</p>
+ 
+    <h2>Here are all our items!</h2>
+ 
+    <!-- Item 1 -->
+    <p> 1000 for this type </p>
+    <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1526270859366&di=ee6e82c7c95bdacfb436647546aac470&imgtype=0&src=http%3A%2F%2Fmvimg2.meitudata.com%2F53dcc0beeb1a3499.jpg">    1   
+    <br>
+
+    <!-- Item 2 -->
+    <p>2000 for this type </p>
+    <img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2886319542,3548585678&fm=27&gp=0.jpg">
+ 
+    <!-- Item 3 -->
+    <p>1000 for this type</p>
+    <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1526270484747&di=1062f98049f21bf1f03958f28a56b3ee&imgtype=jpg&src=http%3A%2F%2Fimg2.imgtn.bdimg.com%2Fit%2Fu%3D2330587252%2C3333658414%26fm%3D214%26gp%3D0.jpg">
+ 
+   
+<!-- User Form -->
+    <h1>Place Your Order</h1>
+    <form action="{% url 'haircut:home_page' %} " method="POST">
+        {% csrf_token %}
+        <input type="price" name="time" placeholder="type time"><br>
+        <textarea placeholder="Text your name" name="customer_name"></textarea><br>
+        <input type="submit" value="Buy Now!">
+    </form>
+    <h1>Your Order</h1>
+    <p>time: {{time}}</p>
+    <p>name: {{customer_n}}</p>
+
+</body>
+</html>
